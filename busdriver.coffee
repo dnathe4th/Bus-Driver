@@ -88,6 +88,11 @@ busDriver= ()->
       bot.speak "AWWWWWW YEAHHHHHHH!"
       bot.speak "/me dances"
       bot.vote "up"
+      
+    if command(data) is "/fistpump"
+      bot.speak "I'm Gonna Fist Pump Till My Arm Falls Off!"
+      bot.speak "/me Fist Pumps"
+      bot.vote "up"
 
     if command(data) is "/djs"
       if _un.keys(djSongCount).length < 5
