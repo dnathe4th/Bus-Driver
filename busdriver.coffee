@@ -92,3 +92,5 @@ busDriver= ()->
         for dj in _un.keys(djSongCount)
           out += "#{roomUsers[dj].name}: #{djSongCount[dj]}, "
         bot.speak out.substring 0, out.length-2
+
+exports.busDriver = busDriver
