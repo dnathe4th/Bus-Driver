@@ -12,17 +12,18 @@ This bot does not work on the latest release of `NodeJs (v0.5.8)`. It is tested 
 
 ## Example
 
-In a file in the same folder as the cloned repository:
+In a file in the same folder as the cloned repository (you can copy and rename `controller.coffee.example`):
 
 	busdriver = require "./busdriver"
 
-	userAuth = "auth+live+99999999999999999999999"
-	userId = "LOLOMGJKIWANNADJHAHAWTF"
-	roomId = 'GOFINDYOUROWNROOM'
-	ircServer = 'irc.HOST.TDL'
+	userAuth = "auth+live+FILL IN AUTH TOKEN HERE"
+	userId = "FILL IN USER ID HERE"
+	roomId = "FILL IN ROOM ID HERE"
+	ircServer = "irc.HOST.TDL"
 	ircChan = "#THISISACHANIJUSTMADEUP"
+	ircHandle = "BusDriver"
 
-	driver = new busdriver.busDriver userAuth, userId, roomId, ircServer, ircChan
+	driver = new busdriver.busDriver userAuth, userId, roomId, ircServer, ircChan, ircHandle
 
 Compile `busdriver` and the `controller` from `CoffeeScript` into `JavaScript` and run with `Node`
 

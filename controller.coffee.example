@@ -1,0 +1,10 @@
+busdriver = require "./busdriver"
+
+userAuth = "auth+live+FILL IN AUTH TOKEN HERE"
+userId = "FILL IN USER ID HERE"
+roomId = "FILL IN ROOM ID HERE"
+ircServer = "irc.HOST.TDL"
+ircChan = "#THISISACHANIJUSTMADEUP"
+ircHandle = "BusDriver"
+
+driver = new busdriver.busDriver userAuth, userId, roomId, ircServer, ircChan, ircHandle
