@@ -23,7 +23,12 @@ In a file in the same folder as the cloned repository (you can copy and rename `
 	ircChan = "#THISISACHANIJUSTMADEUP"
 	ircHandle = "BusDriver"
 
-	driver = new busdriver.busDriver userAuth, userId, roomId, ircServer, ircChan, ircHandle
+	owners = [
+		"OWNER USER ID"
+		"OWNER 2 USER ID"
+	]
+
+	driver = new busdriver.busDriver userAuth, userId, roomId, owners, ircServer, ircChan, ircHandle
 
 Compile `busdriver` and the `controller` from `CoffeeScript` into `JavaScript` and run with `Node`
 
