@@ -158,7 +158,8 @@ busDriver = (options) ->
 
   greetings =
     ".Mnml_Pixels": "/me awkwardly hugs .Mnml_Pixels"
-    "Cameronish": "/me daps C Murda'"
+    "Cameronish": "/me daps Cameronish"
+    "d-_-b": "It's everybody's favorite cinnabon!"
     "DJ Wooooo": "This party must really be poppin', DJ Wooooo is in the house!"
     "Elletiger": "Watch out, Elletiger is on the prowl!"
     "Frick": "SCATTER! It's bot overlord Frick!"
