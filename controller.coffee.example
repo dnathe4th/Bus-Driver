@@ -7,4 +7,8 @@ ircServer = "irc.HOST.TDL"
 ircChan = "#THISISACHANIJUSTMADEUP"
 ircHandle = "BusDriver"
 
-driver = new busdriver.busDriver userAuth, userId, roomId, ircServer, ircChan, ircHandle
+owenrs = [
+	"OWNER ID"
+]
+
+driver = new busdriver.busDriver userAuth, userId, roomId, owners, ircServer, ircChan, ircHandle
