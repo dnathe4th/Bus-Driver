@@ -3,6 +3,15 @@ irc = require 'irc'
 _un = require 'underscore'
 util = require 'util'
 
+Db = require('mongodb').Db
+Connection = require('mongodb').Connection
+Server = require('mongodb').Server
+
+db = new Db 'party-bus', new Server('localhost', 27017, {})
+
+db_connection = null
+db.open (error, db)->
+  db_connection = db
 
 busDriver = (userAuth, selfId, roomId, ircServer, ircChan, ircHandle="BusDriver") ->
   if not userAuth
@@ -142,7 +151,13 @@ busDriver = (userAuth, selfId, roomId, ircServer, ircChan, ircHandle="BusDriver"
           roomUsernames[user.name] = user
           roomUsers[user.userid] = user
           active[user.userid] = true
-        
+              
+          if db_connection
+            db_connection.collection 'backup', (err, collection) ->
+              collection.insert {roomUsernames}
+              collection.insert {roomUsers}
+              collection.insert {active}
+
         # Initialize song
         if data.room.metadata.current_song
           songName = data.room.metadata.current_song.metadata.song
